@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Ionic app
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngFor="let photo of photos ? photos.slice(0, 15) : []">
+    <ion-card-header>
+      <ion-card-title>{{ photo.title }}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-img [src]="photo.thumbnailUrl"></ion-img>
+    </ion-card-content>
+    <ion-button [href]="photo.url"> More </ion-button>
+  </ion-card>
+</ion-content>
